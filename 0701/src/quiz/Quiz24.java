@@ -16,6 +16,5 @@ public class Quiz24 {
 			}
 		}
 		System.out.printf("단어의개수는 %d개",count);
-	}
-
+	 }
 }
