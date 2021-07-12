@@ -1,0 +1,17 @@
+package com.goodee.score;
+
+import java.util.List;
+
+public class ScoreController {
+	ScoreDao dao;
+	
+	public void output()
+	{
+		List<ScoreDto> list = dao.getList();
+		for(int i=0; i<list.size(); i++)
+		{
+			list.get(i).process();
+			list.get(i).output();
+		}
+	}
+}

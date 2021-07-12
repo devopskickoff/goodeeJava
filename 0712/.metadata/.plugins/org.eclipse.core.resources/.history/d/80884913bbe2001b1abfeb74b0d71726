@@ -1,0 +1,47 @@
+package com.goodee.score;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class ScoreController {
+	ScoreDao dao=new ScoreDao();
+	
+	public void output()
+	{
+		List<ScoreDto> list = dao.getList();
+		for(int i=0; i<list.size(); i++)
+		{
+			list.get(i).process();
+			list.get(i).output();
+		}
+	}
+	
+	//과목명, 과목마다 만점이 다르니까 하나 만들어서 다목적으로 쓰려면 매개변수가 
+	//두개가 필요하다 과목명, 과목별만점 
+	public int getScore(String subject, int limit)
+	{
+		Scanner sc = new Scanner(System.in);
+		int score;
+		System.out.print(subject + " : ");
+		score = sc.nextInt();
+		while(score<0 || score>limit)
+		{
+			System.out.printf("입력범위를 초과합니다. 0~%d 사이의 값만 입력하세요\n", limit);
+			System.out.print(subject + " : ");
+			score = sc.nextInt();
+		}
+		
+		return score;
+	}
+	
+	public void append()
+	{
+		
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+package com.goodee.score;
+
+/*
+ * 변수값들하고 , getter/setter 그다음 생성자 
+ * 간단한 연산의 경우는 가능, 데이터 저장용
+ * 딴 한사람 데이터 저장용 클래스  
+ */
+public class ScoreDto {
+	private String name="";
+	private int write=0;
+	private int word=0;
+	private int ppt=0;
+	private int excel=0;
+	private int total=0;
+	private String grade="";
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getWrite() {
+		return write;
+	}
+	public void setWrite(int write) {
+		this.write = write;
+	}
+	public int getWord() {
+		return word;
+	}
+	public void setWord(int word) {
+		this.word = word;
+	}
+	public int getPpt() {
+		return ppt;
+	}
+	public void setPpt(int ppt) {
+		this.ppt = ppt;
+	}
+	public int getExcel() {
+		return excel;
+	}
+	public void setExcel(int excel) {
+		this.excel = excel;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
+	
+}

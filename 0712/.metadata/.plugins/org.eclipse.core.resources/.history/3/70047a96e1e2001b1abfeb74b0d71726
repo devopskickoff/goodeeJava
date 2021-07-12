@@ -1,0 +1,6 @@
+package com.goodee.dictionary;
+
+public class EngKorDicController {
+	EngKorDicDao dao = new EngKorDicDao();
+	
+}
